@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Belleza"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Paytone+One"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiLm2HXhG2z2of7zjcwCsSGtNlzXYYoB8&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="content-wrap">
+      <h1>Overtourism and How to Get Around it</h1>
+      <div class="weather-div">
+        <p>Local Time: <span id="localTime"></span></p>
+        <p class="temp">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-cloudy"
+          >
+            <path d="M17.5 21H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+            <path d="M22 10a3 3 0 0 0-3-3h-2.207a5.502 5.502 0 0 0-10.702.5" />
+          </svg>
+          Temperature: <span id="temperature"></span>
+        </p>
+        <button id="toggleTemp" onclick="toggleTemperature()">
+          Toggle Celsius/Fahrenheit
+        </button>
+      </div>
+      <div class="map-wrapper">
+        <gmp-map
+          center="41.387508392333984,2.1685678958892822"
+          zoom="14"
+          map-id="DEMO_MAP_ID"
+        >
+          <gmp-advanced-marker
+            position="41.387508392333984,2.1685678958892822"
+            title="My location"
+          >
+          </gmp-advanced-marker>
+        </gmp-map>
+      </div>
+      <div class="pages">
+        <a class="linkButton" href="home.html">Back to Home</a>
+        <a class="linkButton" href="p2.html">About Barcelona</a>
+      </div>
+    </div>
+    <footer>
+      <span>Resources used:</span>
+      <a href="https://lucide.dev/icons/cloudy">Cloud Icon SVG</a>
+      <a href="https://www.weatherapi.com/">Weather API</a>
+      <a
+        href="https://developers.google.com/maps/documentation/embed/get-started"
+        >Google Maps Embedding</a
+      >
+    </footer>
+  </body>
+</html>
