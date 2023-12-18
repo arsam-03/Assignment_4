@@ -4,7 +4,7 @@ let isCelsius = true;
 let localTimeEpoch;
 
 async function getWeather() {
-    const response = await fetch("http://api.weatherapi.com/v1/current.json?key=56a953cd8a6f4058a5a22515231812&q=Barcelona&aqi=no")
+    const response = await fetch("https://api.weatherapi.com/v1/current.json?key=56a953cd8a6f4058a5a22515231812&q=Barcelona&aqi=no")
     const data = await response.json()
     console.log(data)
 
